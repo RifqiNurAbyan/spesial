@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surat Cinta 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fdf6e3;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      padding-bottom: 80px;
+    }
+
+    .paper {
+      max-width: 700px;
+      margin: 100px auto 40px;
+      padding: 60px 40px;
+      background: #fffef9;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      border: 1px solid #e0d8c3;
+      border-radius: 10px;
+      position: relative;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.6rem;
+      line-height: 1.8;
+      color: #4a3f35;
+      z-index: 1;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #c2185b;
+      font-family: 'Dancing Script', cursive;
+      margin-top: 60px;
+    }
+
+    .mute-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #fff0f5;
+      border: 2px solid #c2185b;
+      color: #c2185b;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 999;
+      transition: background 0.3s;
+    }
+
+    .mute-btn:hover {
+      background: #f8bbd0;
+    }
+
+    nav {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 99;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+      font-size: 0.85rem;
+      padding: 8px 14px;
+      border-radius: 20px;
+      transition: background 0.3s, color 0.2s;
+    }
+
+    nav a:hover {
+      background: #e91e63;
+      color: #fff;
+    }
+  </style>
+</head>
+<body onload="playOpenSound()">
+
+  <h1>Surat Cinta Untukmu 💌</h1>
+
+  <button class="mute-btn" onclick="toggleSound()">🔈 Mute</button>
+
+  <div class="paper">
+    <p>
+      Sayangku,
+    </p>
+    <p>
+      Aku nggak pandai menulis puisi atau merangkai kata yang indah. Tapi satu hal yang aku tahu pasti, perasaanku padamu itu nyata dan tulus. Setiap hari bersamamu adalah hadiah, dan aku bersyukur Tuhan mempertemukan kita.
+    </p>
+    <p>
+      Mungkin hubungan kita tidak selalu sempurna. Tapi dari kekurangan itu aku belajar untuk lebih memahami, lebih sabar, dan lebih menghargai setiap momen yang kita lewati bareng.
+    </p>
+    <p>
+      Terima kasih ya, udah mau nemenin aku sejauh ini. Aku harap surat kecil ini bisa jadi pengingat betapa aku menyayangimu... selalu dan selamanya. ❤️
+    </p>
+    <p>
+      Dengan cinta yang tak pernah habis,<br/>
+      <em>— Aku</em>
+    </p>
+  </div>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="page2.html">Cerita Kita</a>
+    <a href="page3.html">Alasan Sayang</a>
+    <a href="page4.html">Surat Cinta</a>
+    <a href="page5.html">Sebuah Pertanyaan</a>
+    <a href="page6.html">Galeri Kenangan</a>
+    <a href="page7.html">Video</a>
+    <a href="Penutup.html">Penutup</a>
+  </nav>
+
+  <!-- Backsound dan efek suara -->
+  <audio id="backsound" loop autoplay>
+    <source src="audio/music.mp3" type="audio/mp3">
+  </audio>
+
+  <audio id="paperSound">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7a4c9e5c32.mp3?filename=paper-open-6476.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    const bgm = document.getElementById('backsound');
+    const paperSound = document.getElementById('paperSound');
+    let isMuted = false;
+
+    function toggleSound() {
+      isMuted = !isMuted;
+      bgm.muted = isMuted;
+      document.querySelector(".mute-btn").textContent = isMuted ? "🔇 Unmute" : "🔈 Mute";
+    }
+
+    function playOpenSound() {
+      paperSound.play();
+    }
+  </script>
+</body>
+</html>

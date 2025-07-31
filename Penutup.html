@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terima Kasih, Cinta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding-bottom: 80px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #c2185b;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      margin: 10px 0;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    p:nth-of-type(2) { animation-delay: 1s; }
+    p:nth-of-type(3) { animation-delay: 2s; }
+    p:nth-of-type(4) { animation-delay: 3s; }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+
+    nav {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 99;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+      font-size: 0.85rem;
+      padding: 8px 14px;
+      border-radius: 20px;
+      transition: background 0.3s, color 0.2s;
+    }
+
+    nav a:hover {
+      background: #e91e63;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Terima kasih sudah jadi bagian paling indah dalam hidupku.</h1>
+  <p>"I LOVE YOU ADEK"</p>
+  <p>8 Agustus 2025</p>
+  <p>#45678</p>
+  <p># #FridayForRI</p>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="page2.html">Cerita Kita</a>
+    <a href="page3.html">Alasan Sayang</a>
+    <a href="page4.html">Surat Cinta</a>
+    <a href="page5.html">Sebuah Pertanyaan</a>
+    <a href="page6.html">Galeri Kenangan</a>
+    <a href="page7.html">Video</a>
+    <a href="Penutup.html">Penutup</a>
+  </nav>
+
+</body>
+</html>

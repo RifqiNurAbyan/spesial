@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cerita Kita 🌹</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      padding-bottom: 80px;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 10px;
+    }
+
+    header h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      color: #e91e63;
+    }
+
+    .timeline {
+      width: 90%;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 3px;
+      height: 100%;
+      background: #e91e63;
+      transform: translateX(-50%);
+    }
+
+    .event {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 80%;
+      position: relative;
+      margin: 40px auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .event::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 15px;
+      height: 15px;
+      background: #e91e63;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .event.left {
+      left: 0;
+      margin-left: 0;
+    }
+
+    .event.left::after {
+      left: -30px;
+    }
+
+    .event.right {
+      left: 20%;
+      margin-left: auto;
+    }
+
+    .event.right::after {
+      right: -30px;
+    }
+
+    nav {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 99;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+      font-size: 0.85rem;
+      padding: 8px 14px;
+      border-radius: 20px;
+      transition: background 0.3s, color 0.2s;
+    }
+
+    nav a:hover {
+      background: #e91e63;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .timeline::before {
+        left: 20px;
+      }
+
+      .event {
+        width: calc(100% - 60px);
+        margin-left: 40px;
+      }
+
+      .event.left, .event.right {
+        left: 0;
+      }
+
+      .event.left::after, .event.right::after {
+        left: -25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cerita Kita 💞</h1>
+    <p>Perjalanan kita dimulai dari yang sederhana, tapi jadi istimewa.</p>
+  </header>
+
+  <section class="timeline">
+    <div class="event left" data-aos="fade-right">
+      <h3>📅 May 13, 2025</h3>
+      <p>Awal cerita kita, hari pertama ketemu. Kita cuma saling berkenalan... tapi itu awal dari semuanya 💫</p>
+    </div>
+    <div class="event right" data-aos="fade-left">
+      <h3>💬 May 30, 2025</h3>
+      <p>Pertama kali kamu chat aku... ya walaupun bahas kerjaan sih hehe 😅</p>
+    </div>
+    <div class="event left" data-aos="fade-right">
+      <h3>🌊 Jun 14, 2025</h3>
+      <p>Kita pertama kali keluar bareng... ke pantai dan makan di "Satu Lagi". Hari itu seru banget!</p>
+    </div>
+    <div class="event right" data-aos="fade-left">
+      <h3>🎂 Jul 8, 2025</h3>
+      <p>Kamu rayain ulang tahunku. Makasih kadonya yaa, dan makasih udah hadir di hari itu 🥺</p>
+    </div>
+    <div class="event left" data-aos="fade-right">
+      <h3>🚗 Jul 30, 2025</h3>
+      <p>Pertama kali kita keluar kota bareng. Quality time di Tuban yang nggak bakal kulupa 💕</p>
+    </div>
+  </section>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="page2.html">Cerita Kita</a>
+    <a href="page3.html">Alasan Sayang</a>
+    <a href="page4.html">Surat Cinta</a>
+    <a href="page5.html">Sebuah Pertanyaan</a>
+    <a href="page6.html">Galeri Kenangan</a>
+    <a href="page7.html">Video</a>
+    <a href="Penutup.html">Penutup</a>
+  </nav>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
